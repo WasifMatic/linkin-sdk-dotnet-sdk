@@ -1,0 +1,32 @@
+
+# Tax Info
+
+The tax ID of the customer. The customer is also known as the payer. Both `tax_id` and `tax_id_type` are required.
+
+*This model accepts additional fields of type JsonValue.*
+
+## Structure
+
+`TaxInfo`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `TaxId` | `string` | Required | The customer's tax ID value.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `14`, *Pattern*: `([a-zA-Z0-9])` |
+| `TaxIdType` | [`TaxIdType`](../../doc/models/tax-id-type.md) | Required | The customer's tax ID type.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `14`, *Pattern*: `^[A-Z0-9_]+$` |
+| `AdditionalProperties` | `JsonValue this[string key]` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "tax_id": "tax_id0",
+  "tax_id_type": "BR_CPF",
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+

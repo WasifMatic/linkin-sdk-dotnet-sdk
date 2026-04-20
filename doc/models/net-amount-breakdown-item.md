@@ -1,0 +1,56 @@
+
+# Net Amount Breakdown Item
+
+The net amount. Returned when the currency of the refund is different from the currency of the PayPal account where the merchant holds their funds.
+
+*This model accepts additional fields of type JsonValue.*
+
+## Structure
+
+`NetAmountBreakdownItem`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `PayableAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `ConvertedAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `ExchangeRate` | [`ExchangeRate`](../../doc/models/exchange-rate.md) | Optional | The exchange rate that determines the amount to convert from one currency to another currency. |
+| `AdditionalProperties` | `JsonValue this[string key]` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "payable_amount": {
+    "currency_code": "currency_code8",
+    "value": "value4",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "converted_amount": {
+    "currency_code": "currency_code0",
+    "value": "value6",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "exchange_rate": {
+    "source_currency": "source_currency4",
+    "target_currency": "target_currency6",
+    "value": "value6",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+

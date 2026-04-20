@@ -1,0 +1,82 @@
+
+# Subscription Amount with Breakdown
+
+The breakdown details for the amount. Includes the gross, tax, fee, and shipping amounts.
+
+*This model accepts additional fields of type JsonValue.*
+
+## Structure
+
+`SubscriptionAmountWithBreakdown`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `GrossAmount` | [`Money`](../../doc/models/money.md) | Required | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `TotalItemAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `FeeAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `ShippingAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `TaxAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `NetAmount` | [`Money`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `AdditionalProperties` | `JsonValue this[string key]` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "gross_amount": {
+    "currency_code": "currency_code4",
+    "value": "value0",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "total_item_amount": {
+    "currency_code": "currency_code8",
+    "value": "value4",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "fee_amount": {
+    "currency_code": "currency_code2",
+    "value": "value4",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "shipping_amount": {
+    "currency_code": "currency_code0",
+    "value": "value6",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "tax_amount": {
+    "currency_code": "currency_code2",
+    "value": "value8",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "net_amount": {
+    "currency_code": "currency_code6",
+    "value": "value2",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+

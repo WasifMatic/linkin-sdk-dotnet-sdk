@@ -1,0 +1,46 @@
+
+# Platform Fee
+
+The platform or partner fee, commission, or brokerage fee that is associated with the transaction. Not a separate or isolated transaction leg from the external perspective. The platform fee is limited in scope and is always associated with the original payment for the purchase unit.
+
+*This model accepts additional fields of type JsonValue.*
+
+## Structure
+
+`PlatformFee`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `Amount` | [`Money`](../../doc/models/money.md) | Required | The currency and amount for a financial transaction, such as a balance or payment due. |
+| `Payee` | [`PayeeBase`](../../doc/models/payee-base.md) | Optional | The details for the merchant who receives the funds and fulfills the order. The merchant is also known as the payee. |
+| `AdditionalProperties` | `JsonValue this[string key]` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "amount": {
+    "currency_code": "currency_code6",
+    "value": "value0",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "payee": {
+    "email_address": "email_address4",
+    "merchant_id": "merchant_id6",
+    "exampleAdditionalProperty": {
+      "key1": "val1",
+      "key2": "val2"
+    }
+  },
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+

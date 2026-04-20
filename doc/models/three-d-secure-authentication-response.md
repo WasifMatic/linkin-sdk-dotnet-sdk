@@ -1,0 +1,32 @@
+
+# Three D Secure Authentication Response
+
+Results of 3D Secure Authentication.
+
+*This model accepts additional fields of type JsonValue.*
+
+## Structure
+
+`ThreeDSecureAuthenticationResponse`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `AuthenticationStatus` | [`PaResStatus?`](../../doc/models/pa-res-status.md) | Optional | Transactions status result identifier. The outcome of the issuer's authentication.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `255`, *Pattern*: `^[0-9A-Z_]+$` |
+| `EnrollmentStatus` | [`EnrollmentStatus?`](../../doc/models/enrollment-status.md) | Optional | Status of Authentication eligibility.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `255`, *Pattern*: `^[0-9A-Z_]+$` |
+| `AdditionalProperties` | `JsonValue this[string key]` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "authentication_status": "C",
+  "enrollment_status": "Y",
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+
